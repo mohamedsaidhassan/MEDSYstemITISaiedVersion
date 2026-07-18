@@ -188,11 +188,11 @@ namespace MEDSYstemITI
             app.MapControllers();
             app.MapHub<NotificationHub>("/notificationHub");
 
-            // Applies pending migrations and seeds roles/permissions/admin user.
-            //using (var scope = app.Services.CreateScope())
-            //{
-            //    await DbInitializer.SeedAsync(scope.ServiceProvider);
-            //}
+            //   // Applies pending migrations and seeds roles/permissions/admin user.
+            using (var scope = app.Services.CreateScope())
+            {
+                await DbInitializer.SeedAsync(scope.ServiceProvider);
+            }
 
             app.Run();
         }
