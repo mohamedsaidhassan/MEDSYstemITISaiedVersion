@@ -90,34 +90,34 @@ public static class DbInitializer
         await SeedAdminUserAsync(userManager);
 
         // ── 5: Departments (must come before Doctors) ─────────────────────────────
-        await DepartmentSeeder.SeedAsync(context);
+        //await DepartmentSeeder.SeedAsync(context);
 
         // ── 6: Doctors (need departments + Doctor role) ───────────────────────────
-        await DoctorSeeder.SeedAsync(context, userManager);
+        //await DoctorSeeder.SeedAsync(context, userManager);
 
         // ── 7: Patients ───────────────────────────────────────────────────────────
-        await PatientSeeder.SeedAsync(context, userManager);
+        //await PatientSeeder.SeedAsync(context, userManager);
 
         // ── 8: Lab Technicians ────────────────────────────────────────────────────
-        await LabTechnicianSeeder.SeedAsync(context, userManager);
+        //await LabTechnicianSeeder.SeedAsync(context, userManager);
 
         // ── 9: Test Elements (building blocks of lab tests) ───────────────────────
-        await TestElementSeeder.SeedAsync(context);
+        //await TestElementSeeder.SeedAsync(context);
 
         // ── 10: Lab Tests + Lab Test Elements (join) ──────────────────────────────
-        await LabTestSeeder.SeedAsync(context);
+        //await LabTestSeeder.SeedAsync(context);
 
         // ── 11: Sessions (patient × doctor × department) ─────────────────────────
-        await SessionSeeder.SeedAsync(context);
+        //await SessionSeeder.SeedAsync(context);
 
         // ── 12: Lab Requests (ordered by a doctor in a session) ───────────────────
-        await RequestLabsSeeder.SeedAsync(context);
+        //await RequestLabsSeeder.SeedAsync(context);
 
         // ── 13: Patient Results + Result Elements ─────────────────────────────────
-        await PatientResultSeeder.SeedAsync(context);
+        //await PatientResultSeeder.SeedAsync(context);
 
         // ── 14: Notifications ─────────────────────────────────────────────────────
-        await NotificationSeeder.SeedAsync(context, userManager);
+        //await NotificationSeeder.SeedAsync(context, userManager);
     }
 
     // ── Private helpers ──────────────────────────────────────────────────────────
